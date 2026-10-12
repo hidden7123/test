@@ -111,3 +111,7 @@ dist
 
 # TernJS port file
 .tern-port
+
+# BEGIN expert-team local state
+/.expert-team/
+# END expert-team local state
