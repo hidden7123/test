@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "requirementsSha256": "sha256:836b95b7de52e3a5db9020586e18afa74bd76b30c480491859ebda02994822ce",
+    "designSha256": "sha256:31535fc66a49403b4f8e9f2266292c164bec44bba66e971eb4e3a754c1d1172d"
+  },
+  "tasks": [
+    {
+      "requirementIds": [
+        "G-01",
+        "G-02",
+        "G-03",
+        "C-01",
+        "C-02",
+        "C-03"
+      ],
+      "dependsOn": [],
+      "inputArtifacts": [
+        {
+          "path": "docs/wi-t1000078/requirements.md",
+          "sha256": "sha256:836b95b7de52e3a5db9020586e18afa74bd76b30c480491859ebda02994822ce"
+        },
+        {
+          "path": "docs/wi-t1000078/architecture-baseline.md",
+          "sha256": "sha256:31535fc66a49403b4f8e9f2266292c164bec44bba66e971eb4e3a754c1d1172d"
+        }
+      ],
+      "artifactPaths": [
+        "docs/wi-t1000078/implementation-report.md"
+      ],
+      "resourceKeys": [],
+      "verificationCommands": [
+        "test -s docs/wi-t1000078/implementation-report.md"
+      ],
+      "failurePolicy": "block",
+      "blockerCodes": [],
+      "taskId": "T01",
+      "objective": "按已批准的需求基线（docs/wi-t1000078/requirements.md v1）与架构基线（docs/wi-t1000078/architecture-baseline.md），撰写 implementation 阶段产物 docs/wi-t1000078/implementation-report.md：如实记录本阶段为流程执行型实现——工作区为空初始构建项目、用户未提出产品功能需求、未编写任何产品源码或配置变更，唯一交付物为本报告；报告须引用上游产物路径、记录执行事实与阶段边界（含授权范围守卫），不虚构产品范围，并供阶段 complete 收口使用。",
+      "capabilityId": "engineering.implementation",
+      "taskKind": "implement",
+      "executionMode": "spawn_task",
+      "expertId": "general-app-development-expert",
+      "successors": [],
+      "writableScopes": [
+        "docs/wi-t1000078/implementation-report.md"
+      ],
+      "exclusiveWritePaths": [
+        "docs/wi-t1000078/implementation-report.md"
+      ]
+    }
+  ],
+  "planId": "plan:db9ea4c8-28f1-46d8-b8fc-1ff508e466f6"
+}

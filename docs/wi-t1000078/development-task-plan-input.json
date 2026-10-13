@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "taskId": "T01",
+      "objective": "按已批准的需求基线（docs/wi-t1000078/requirements.md v1）与架构基线（docs/wi-t1000078/architecture-baseline.md），撰写 implementation 阶段产物 docs/wi-t1000078/implementation-report.md：如实记录本阶段为流程执行型实现——工作区为空初始构建项目、用户未提出产品功能需求、未编写任何产品源码或配置变更，唯一交付物为本报告；报告须引用上游产物路径、记录执行事实与阶段边界（含授权范围守卫），不虚构产品范围，并供阶段 complete 收口使用。",
+      "requirementIds": ["G-01", "G-02", "G-03", "C-01", "C-02", "C-03"],
+      "capabilityId": "engineering.implementation",
+      "taskKind": "implement",
+      "executionMode": "spawn_task",
+      "dependsOn": [],
+      "inputArtifacts": [
+        "docs/wi-t1000078/requirements.md",
+        "docs/wi-t1000078/architecture-baseline.md"
+      ],
+      "artifactPaths": ["docs/wi-t1000078/implementation-report.md"],
+      "additionalWritePaths": [],
+      "additionalWriteScopes": [],
+      "resourceKeys": [],
+      "verificationCommands": ["test -s docs/wi-t1000078/implementation-report.md"],
+      "failurePolicy": "block",
+      "blockerCodes": []
+    }
+  ]
+}
