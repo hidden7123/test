@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "requirementsSha256": "sha256:72dfdaa6675c0b2955617ba62273886ec48c4e18d41071c5955dac71bb4c68df",
+    "designSha256": "sha256:532f9515541734e20b6e20c8f8a4db125810c6a600d17c657ae4058bc389bed0"
+  },
+  "tasks": [
+    {
+      "requirementIds": [],
+      "dependsOn": [],
+      "inputArtifacts": [
+        {
+          "path": "docs/wi-t1000067/requirements.md",
+          "sha256": "sha256:72dfdaa6675c0b2955617ba62273886ec48c4e18d41071c5955dac71bb4c68df"
+        },
+        {
+          "path": "docs/wi-t1000067/architecture-baseline.md",
+          "sha256": "sha256:532f9515541734e20b6e20c8f8a4db125810c6a600d17c657ae4058bc389bed0"
+        }
+      ],
+      "artifactPaths": [
+        "docs/wi-t1000067/implementation-report.md"
+      ],
+      "resourceKeys": [],
+      "failurePolicy": "block",
+      "blockerCodes": [],
+      "taskId": "T01",
+      "summary": "按空功能基线完成最小实现闭环，产出实现报告（不引入源码变更）",
+      "objective": "## 目标\n\n按已批准的空功能基线完成本工作项的最小实现闭环：\n\n- 基线事实：需求基线 v0.1 为空功能基线（业务任务输入「1」为占位内容，无功能需求、验收条件与非功能约束，闭合结论为「输入不含可实现的产品需求」）；架构基线明确不冻结应用形态与技术栈，不生成 technical-contract.md，无可运行应用与启动契约。\n- 实现范围：不引入任何产品源码、框架、依赖或构建配置变更；保持工作区现状（占位 README 与 docs 目录），不创建 app/src 等应用结构，不初始化任何技术栈。\n- 产出：编写 docs/wi-t1000067/implementation-report.md，如实记录空基线实现结论（无源码产出、无功能性变更）、上游基线依据（requirements.md、architecture-baseline.md）与实际执行的核查结果。\n\n## 验证\n\n- 核查工作区未引入业务代码、依赖文件或应用目录结构。\n- 核查实现报告内容与批准基线一致，不虚构功能实现或运行结果。",
+      "capabilityId": "engineering.implementation",
+      "taskKind": "implement",
+      "executionMode": "spawn_task",
+      "expertId": "general-app-development-expert",
+      "successors": [],
+      "writableScopes": [
+        "docs/wi-t1000067/implementation-report.md"
+      ],
+      "exclusiveWritePaths": [
+        "docs/wi-t1000067/implementation-report.md"
+      ]
+    }
+  ],
+  "planId": "plan:19e1a766-3c64-47f6-827d-71b4e59bde00"
+}
