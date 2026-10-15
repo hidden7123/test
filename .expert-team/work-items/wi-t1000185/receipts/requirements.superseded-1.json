@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "requirements:1",
+  "receiptType": "cosmic-requirements",
+  "specId": "cosmic-development-spec",
+  "graphRevision": 13,
+  "actionId": "requirements",
+  "inputRevision": 0,
+  "stateVersion": 1,
+  "outcome": "passed",
+  "contentHash": "sha256:f7a1e970298982bd6b9eeb15a331e0fd316292fcec7fbf8cd5bde28a78bed807",
+  "createdAt": "2026-10-15T13:42:35.585Z",
+  "timing": {
+    "startedAt": "2026-10-15T13:36:20.724Z",
+    "completedAt": "2026-10-15T13:42:35.585Z",
+    "durationMs": 374861
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000185/requirements.md",
+      "bytes": 4014,
+      "sha256": "sha256:fb7d95a4148dc7f39cf66936a748457e8ebc2a9de3127912835521c73e5e2e47",
+      "title": "需求基线：业务任务「1」（占位任务）"
+    }
+  ],
+  "verification": [
+    {
+      "checkId": "requirements:completion",
+      "status": "passed"
+    }
+  ]
+}

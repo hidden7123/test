@@ -1,0 +1,11 @@
+{
+  "workItemId": "wi-t1000185",
+  "applicationId": "application",
+  "workItemType": "initial-build",
+  "title": "请在当前 Session 中完成这个 IssueTask，按指定的连续阶段范围执行：requirements。业务任务：1",
+  "request": "请在当前 Session 中完成这个 IssueTask，按指定的连续阶段范围执行：requirements。业务任务：1",
+  "status": "active",
+  "specId": "cosmic-development-spec",
+  "revision": 0,
+  "createdAt": "2026-10-15T13:36:20.574Z"
+}
