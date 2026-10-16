@@ -2,14 +2,39 @@
   "schemaVersion": 2,
   "specId": "general-application-development-spec",
   "specRevision": 14,
-  "state": "requirements_ready",
-  "revision": 1,
+  "state": "design_ready",
+  "revision": 2,
   "completedActions": [
-    "requirements"
+    "requirements",
+    "design"
   ],
   "blockers": [],
   "deliveryProfile": "standard",
   "graphRevision": 5,
   "graphHash": "sha256:2a57c363d9373645b17d5b6c69980060de84b107d719f5358c096d8adc5cce44",
-  "updatedAt": "2026-10-15T16:18:23.659Z"
+  "updatedAt": "2026-10-16T02:22:45.398Z",
+  "applicationProfile": {
+    "schemaVersion": 1,
+    "applicationType": "fullstack-complex",
+    "source": {
+      "artifactPath": "docs/wi-t1000200/requirements.md",
+      "sha256": "sha256:dc9914ef0606c12c8665379e5f6f991b6acbf1c56c43e70df12dcb938b30e127"
+    },
+    "reason": "批准需求基线为 blocked：业务任务仅含标识“1”，无任何产品语义（无目标、场景、数据对象、集成或约束）。需求未明确声明只需浏览器页面/静态/本地状态，也未明确排除服务端、权威数据库、认证、后台任务、外部服务及跨用户/设备同步；按分类契约的歧义默认路由 fullstack-complex，待确认点记入 unresolved。",
+    "evidence": {
+      "supporting": [
+        "requirements.md 第 11 节：需求基线判定为 blocked，唯一阻塞项为业务任务内容缺失（仅编号“1”，无产品语义）。",
+        "requirements.md 第 6、7 节：无已声明功能模块，用户未提出部署、持久性、权限等任何非功能要求；不存在可排除服务端能力的明确声明。"
+      ],
+      "excluding": [],
+      "unresolved": [
+        "业务任务“1”的具体内容缺失：无产品目标、用户群、成功结果、场景或约束（requirements.md 第 2、11 节）。",
+        "是否需要服务端、权威数据库、认证、后台任务、外部集成或跨用户/设备共享无法判定。",
+        "无任何功能模块、用户旅程或界面声明，用户界面的存在性及形态无法判定。",
+        "当前仓库为初始空仓库（README 仅含“# test”），无既有技术栈或运行证据可用于继承。"
+      ]
+    },
+    "decidedAt": "2026-10-16T02:18:47.370Z",
+    "sha256": "sha256:889c54dd088e4f170fe173b54362f8ccb3d6b33b5e053f8933adcdd8cff5ec88"
+  }
 }
