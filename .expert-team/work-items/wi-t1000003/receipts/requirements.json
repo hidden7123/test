@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "requirements:1",
+  "receiptType": "requirements-baseline",
+  "specId": "general-application-development-spec",
+  "graphRevision": 5,
+  "actionId": "requirements",
+  "inputRevision": 0,
+  "stateVersion": 1,
+  "outcome": "passed",
+  "contentHash": "sha256:e5e5c0656474792d2b9aa82c4bb2d73ed8c216071fa3cd631941b701a697be58",
+  "createdAt": "2026-10-27T08:25:43.673Z",
+  "timing": {
+    "startedAt": "2026-10-27T08:22:20.258Z",
+    "completedAt": "2026-10-27T08:25:43.672Z",
+    "durationMs": 203414
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000003/requirements.md",
+      "bytes": 2760,
+      "sha256": "sha256:de344a8f5de84ef37e018bf2b2fc384b4acbad63201e9c4bf073318ef579ff81",
+      "role": "requirements",
+      "purpose": "T1000003 需求阶段交付物：最小可验收基线（目标、来源标注、核心行为、AC-01）",
+      "title": "需求：测试工作（T1000003）"
+    }
+  ],
+  "verification": [
+    {
+      "checkId": "artifact-written",
+      "status": "passed"
+    },
+    {
+      "checkId": "ac-covers-core-result",
+      "status": "passed"
+    },
+    {
+      "checkId": "source-labeled",
+      "status": "passed"
+    }
+  ]
+}

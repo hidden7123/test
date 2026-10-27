@@ -1,0 +1,11 @@
+{
+  "workItemId": "wi-t1000003",
+  "applicationId": "application",
+  "workItemType": "initial-build",
+  "title": "测试\n\n测试工作\n\nOriginal task context (user-provided facts):\n\n{\"issueId\":\"20420090256162816\",\"code\":\"T1000003\",\"title\":\"测试\",\"description\":\"测试工作\",\"priority\":\"normal\",\"labels\":[],\"kind\":\"requirement\",\"acceptanceCriteria\":[],\"projectName\":\"开发\"}",
+  "request": "测试\n\n测试工作\n\nOriginal task context (user-provided facts):\n\n{\"issueId\":\"20420090256162816\",\"code\":\"T1000003\",\"title\":\"测试\",\"description\":\"测试工作\",\"priority\":\"normal\",\"labels\":[],\"kind\":\"requirement\",\"acceptanceCriteria\":[],\"projectName\":\"开发\"}",
+  "status": "active",
+  "specId": "general-application-development-spec",
+  "revision": 0,
+  "createdAt": "2026-10-27T08:22:20.080Z"
+}
