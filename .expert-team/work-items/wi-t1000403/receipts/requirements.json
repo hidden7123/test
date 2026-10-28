@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "requirements:1",
+  "receiptType": "requirements-baseline",
+  "specId": "general-application-development-spec",
+  "graphRevision": 5,
+  "actionId": "requirements",
+  "inputRevision": 0,
+  "stateVersion": 1,
+  "outcome": "passed",
+  "contentHash": "sha256:83fbe9002261ef01417979dfedb14a120519e84a8b0b9513a09cab9314b524f2",
+  "createdAt": "2026-10-28T01:32:37.672Z",
+  "timing": {
+    "startedAt": "2026-10-28T01:32:11.082Z",
+    "completedAt": "2026-10-28T01:32:37.672Z",
+    "durationMs": 26590
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000403/requirements.md",
+      "bytes": 2854,
+      "sha256": "sha256:3dd54a34804b8a7138f80f9d63a8f34275249c738b209a25489bfafd1565292e",
+      "role": "requirements",
+      "purpose": "T1000403「测试」需求基线：按用户原文占位登记，标注产品范围未定义、推荐基线为空，并列出待澄清问题与唯一可执行验收项 AC-01",
+      "title": "需求说明（T1000403 测试）"
+    }
+  ],
+  "verification": [
+    {
+      "checkId": "AC-01",
+      "status": "passed"
+    }
+  ]
+}
