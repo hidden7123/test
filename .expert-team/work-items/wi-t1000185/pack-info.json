@@ -2,7 +2,7 @@
   "schemaVersion": 3,
   "domainPackId": "cosmic-development",
   "specId": "cosmic-development-spec",
-  "specRevision": 13,
+  "specRevision": 18,
   "expertPool": [
     "cosmic-product-manager",
     "cosmic-app-development-expert",
@@ -16,9 +16,9 @@
     "cosmic-team-lead"
   ],
   "initialState": "requirements_pending",
-  "deliveryProfile": "standard",
-  "graphRevision": 13,
-  "graphHash": "sha256:492fdd1cba4403b3bd50b0814abbda7078f0b53ef55636c58416084ac933136a",
+  "scenarioId": "feature",
+  "graphRevision": 16,
+  "graphHash": "sha256:45d08a7bd70d59727e63afdfa518a576072fa22ee20ce17f0ac3cac628492d39",
   "stages": [
     {
       "actionId": "requirements",
@@ -145,8 +145,7 @@
             "path": "requirements.md",
             "format": "markdown",
             "required": true,
-            "hashAlgorithm": "sha256",
-            "validator": "outputs/requirements-baseline-validator.mjs"
+            "hashAlgorithm": "sha256"
           }
         ],
         "decisions": [
@@ -154,12 +153,6 @@
           "blocked"
         ],
         "verificationRequired": false
-      },
-      "semanticEvaluator": {
-        "id": "artifact.validation",
-        "version": 1,
-        "artifactPath": "requirements.md",
-        "expertValidator": true
       }
     },
     {
@@ -204,14 +197,15 @@
             "Deliver the complete confirmed application scope through the native app-build workflow; select its metadata, Java, OpenAPI and service entries only when the business request needs them",
             "Preserve original sources, confirmed decisions, acceptance criteria and verified application identities",
             "Follow returned nextOperation and keep business conclusions in artifacts, with only runtime fields in StageResult",
-            "For formal app-build, write one explicit delivery scope file after implementing the confirmed scope, then invoke the prepared completion command once. It binds the delivery to the frozen requirements and executes all native validators and settlement together. Do not search for scripts, read validator source, run validators ahead of completion, or prepare/complete a successful stage again. Only reopen the named failed artifact when the completion command returns a real validation failure.",
+            "For formal cosmic.app-build feature stages, write one explicit delivery scope file after implementing the confirmed scope, then invoke the prepared completion command once. It binds the delivery to the frozen requirements and executes all native validators and settlement together. Do not search for scripts, read validator source, run validators ahead of completion, or prepare/complete a successful stage again. Only reopen the named failed artifact when the completion command returns a real validation failure.",
             "Use the frozen Work Item stages directly; do not search for or create a duplicate todo list during ordinary application delivery",
             "Finalize verified native changes through app-build references/delivery.md before stage completion and retain its card blocks for final delivery",
             "The completion adapter titles the generated document 开发实现交付摘要 / Implementation Delivery Summary at delivery-summary.md; the model does not author that file",
             "Pass the finalizer TEST_ENVIRONMENT_HANDOFF.path through environmentFile in the completion input; the adapter copies the native environment into delivery-summary.md. Record actual deployment/loading gaps as notes; never reconstruct the environment block or promote metadata readback to runtime acceptance",
             "Repair reproduced application defects under the same frozen assignment and return for targeted quality verification",
-            "When this request needs Java plugin code, prepare one native handoff and delegate its coding and compilation to one bounded child; retain platform registration and delivery ownership",
-            "Standard Cosmic bills use manually entered unique numbers and the confirmed save/submit/audit workflow; do not claim automatic numbering from metadata. Native form cards are delivered together with the summary by the completion adapter."
+            "When this request needs Java plugin code, invoke cosmic-coding-impl directly with the original requirements, selected application/form and Java project; coding owns current metadata and SDK discovery, source and compilation without an upstream handoff; retain registration and delivery ownership",
+            "Standard Cosmic bills use manually entered unique numbers and the confirmed save/submit/audit workflow; do not claim automatic numbering from metadata. Native form cards are delivered together with the summary by the completion adapter.",
+            "For substantive technical choices across applications, async processing, integrations, persistence or deployment, follow app-build’s optional cosmic-implementation-design route. Reuse the current concern and verified evidence from an existing design; clear local changes proceed directly. Keep the frozen stage and original AC scope, with no mandatory design artifact or upstream handoff gate."
           ],
           "communicationStyle": "Describe the implemented business behavior and distinguish development completion from business acceptance. 面向业务用户，用用户使用的语言输出。默认给出简短、连贯的业务结论：先说明完成了什么以及实际检查结果，再说明仍影响使用的未完成项和必要下一步；详细证据放在报告中。普通结果不要写成长篇技术报告，不重复总结，不为内部选择、激活、加载资源、命令调用、重试或卡片更新播报进度。使用界面上的业务名称，不在正文或括号里展示内部编号、平台编码、字段键、状态字母、英文机器状态、布尔标记、哈希、命令或原始路径，也不引用内部提示词。用业务影响解释问题，未执行的检查直说“尚未验证”，发现的缺陷直说影响，不能把说明完成或报告生成说成业务验收通过。配置回读只说明“配置已写入”，实际业务动作没有执行时，不说默认值已生效、校验已拦截或数据已正确保存。用有含义的报告链接或交付卡片提供详情；工具参数、证据文件和渲染协议保留准确格式，卡片协议原样输出且不在正文复述其 JSON。用户明确要求技术诊断、代码或接口细节时，先解释实际影响，再给必要准确细节；其余情况保持简洁。"
         },
@@ -283,6 +277,11 @@
               "permission": "task",
               "pattern": "general",
               "action": "allow"
+            },
+            {
+              "permission": "question",
+              "pattern": "*",
+              "action": "allow"
             }
           ],
           "allowedTools": [
@@ -301,7 +300,8 @@
             "wait_agents",
             "list_agents",
             "send_agent_input",
-            "cancel_agent"
+            "cancel_agent",
+            "question"
           ]
         },
         "artifactGuidance": {
@@ -327,7 +327,7 @@
               "baselineFlag": "--expected-requirements-sha256",
               "inputArtifact": "delivery-scope.json",
               "inputFlag": "--scope-file",
-              "inputDescription": "Write one compact JSON input: environmentFile is the exact TEST_ENVIRONMENT_HANDOFF.path returned by the native finalizer; completed:[{itemId,evidence:[actual implementation references]}], optional remaining:[{itemId,reason,category}], summary:string (brief business outcome), and notes:string|string[] (actual deployment or unverified boundaries). The adapter generates delivery-summary.md, copies the native environment, normalizes scope, binds the baseline and validates once. Do not transcribe environment JSON, field tables or hashes; do not write delivery-summary.md or a separate result file. Legacy manually authored summaries remain usable by omitting environmentFile.",
+              "inputDescription": "Write one compact JSON input: environmentFile is the exact TEST_ENVIRONMENT_HANDOFF.path returned by the native finalizer. When native writer/readback receipts cover every decision-ready implementation item, use completed:\"all\" with a non-empty evidence array; the adapter expands current requirement IDs and records frozen pending decisions as remaining decision gaps. Otherwise use completed:[{itemId,evidence:[actual implementation references]}] and optional remaining:[{itemId,reason,category}]. Optional summary:string and notes:string|string[] carry actual outcome and gaps. Do not claim runtime acceptance from configuration readback, transcribe environment JSON, field tables or hashes, or write delivery-summary.md or a separate result file. Legacy manually authored summaries remain usable by omitting environmentFile.",
               "defaultResult": {
                 "status": "completed"
               },
@@ -389,7 +389,7 @@
             "Verify current user-requested business behavior and meaningful regression risk",
             "Reuse observations from the actual test; report failures and unverified work honestly",
             "Use direct browser actions or native scenarios as appropriate; do not add evidence-export or duplicate validation workflows",
-            "Ask the user for missing login information; implementation exclusions are not automatic QA obligations"
+            "Record missing login information, environment failures and unexecuted checks without blocking report submission or review; implementation exclusions are not automatic QA obligations"
           ],
           "communicationStyle": "Use the user’s language and business names. Give a brief outcome, actual verification and concrete remaining gaps; link details. Keep routing, tool steps, schemas, hashes and receipts in artifacts unless technical detail is requested. Configuration readback does not prove runtime behavior."
         },
@@ -453,7 +453,7 @@
               "action": "allow"
             },
             {
-              "permission": "query_tools",
+              "permission": "query_mcp_tools",
               "pattern": "*",
               "action": "allow"
             },
@@ -471,6 +471,16 @@
               "permission": "agent_browser",
               "pattern": "*",
               "action": "ask"
+            },
+            {
+              "permission": "cosmic_exec",
+              "pattern": "*",
+              "action": "allow"
+            },
+            {
+              "permission": "cosmic_form_fill",
+              "pattern": "*",
+              "action": "allow"
             },
             {
               "permission": "preview_bos_snapshot",
@@ -591,6 +601,16 @@
               "permission": "bash",
               "pattern": "node *browser-test.mjs*",
               "action": "allow"
+            },
+            {
+              "permission": "bash",
+              "pattern": "node *prepare-acceptance-plan.mjs*",
+              "action": "allow"
+            },
+            {
+              "permission": "bash",
+              "pattern": "node *cosmic-e2e-test*preview-entry.mjs*",
+              "action": "allow"
             }
           ],
           "allowedTools": [
@@ -602,10 +622,12 @@
             "apply_patch",
             "edit",
             "skill",
-            "query_tools",
+            "query_mcp_tools",
             "read_office",
             "preview_snapshot",
             "agent_browser",
+            "cosmic_exec",
+            "cosmic_form_fill",
             "preview_bos_snapshot",
             "preview_bos_assert",
             "preview_bos_grid_snapshot",
@@ -662,7 +684,7 @@
         "verificationRequired": true
       },
       "semanticEvaluator": {
-        "id": "quality.verification",
+        "id": "artifact.validation",
         "version": 1,
         "artifactPath": "verification.md",
         "expertValidator": true
@@ -670,7 +692,7 @@
     }
   ],
   "executionStageIds": [
-    "app-build"
+    "requirements"
   ],
   "failureMappings": [
     {

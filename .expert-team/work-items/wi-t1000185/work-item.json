@@ -2,10 +2,10 @@
   "workItemId": "wi-t1000185",
   "applicationId": "application",
   "workItemType": "initial-build",
-  "title": "请在当前 Session 中完成这个 IssueTask，按指定的连续阶段范围执行：requirements。业务任务：1",
-  "request": "请在当前 Session 中完成这个 IssueTask，按指定的连续阶段范围执行：requirements。业务任务：1",
+  "title": "1\n\n1\n\nOriginal task context (user-provided facts):\n\n{\"issueId\":\"16149047341481984\",\"code\":\"T1000185\",\"title\":\"1\",\"description\":\"1\",\"priority\":\"normal\",\"labels\":[],\"kind\":\"requirement\",\"acceptanceCriteria\":[],\"projectName\":\"测试项目\"}\n\n本轮为退回后重新执行（第 2 轮）：本阶段产物曾被退回，退回原因：退回上一个节点测试是否能正常审核通过。本次仅授权执行 requirements 阶段，完成 requirements 后停止。业务任务原文仅为字符「1」，无其他业务内容。",
+  "request": "1\n\n1\n\nOriginal task context (user-provided facts):\n\n{\"issueId\":\"16149047341481984\",\"code\":\"T1000185\",\"title\":\"1\",\"description\":\"1\",\"priority\":\"normal\",\"labels\":[],\"kind\":\"requirement\",\"acceptanceCriteria\":[],\"projectName\":\"测试项目\"}\n\n本轮为退回后重新执行（第 2 轮）：本阶段产物曾被退回，退回原因：退回上一个节点测试是否能正常审核通过。本次仅授权执行 requirements 阶段，完成 requirements 后停止。业务任务原文仅为字符「1」，无其他业务内容。",
   "status": "active",
   "specId": "cosmic-development-spec",
   "revision": 0,
-  "createdAt": "2026-10-15T13:36:20.574Z"
+  "createdAt": "2026-11-06T05:53:42.696Z"
 }

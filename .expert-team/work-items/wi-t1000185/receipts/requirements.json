@@ -1,32 +1,55 @@
 {
   "schemaVersion": 2,
-  "receiptId": "requirements:5",
+  "receiptId": "requirements:1",
   "receiptType": "cosmic-requirements",
   "specId": "cosmic-development-spec",
-  "graphRevision": 13,
+  "graphRevision": 16,
   "actionId": "requirements",
-  "inputRevision": 4,
-  "stateVersion": 5,
+  "inputRevision": 0,
+  "stateVersion": 1,
   "outcome": "passed",
-  "contentHash": "sha256:1912f891013f00ef41bd031589f3bda827a1ffd09ba364cee34b6b6862bc66e8",
-  "createdAt": "2026-10-15T13:58:22.456Z",
+  "contentHash": "sha256:bca8adc922e0a45fe787c57a277f0c6922ca812c176da7fe35af1dab46414bc7",
+  "createdAt": "2026-11-06T05:54:12.874Z",
   "timing": {
-    "startedAt": "2026-10-15T13:36:20.724Z",
-    "completedAt": "2026-10-15T13:58:22.456Z",
-    "durationMs": 1321732
+    "startedAt": "2026-11-06T05:53:42.816Z",
+    "completedAt": "2026-11-06T05:54:12.873Z",
+    "durationMs": 30057
   },
   "artifacts": [
     {
       "path": "docs/wi-t1000185/requirements.md",
-      "bytes": 4645,
-      "sha256": "sha256:0b5f0503eee5b2dd62f9c101b7ececa1827d94a360434edbd44041a712a13119",
-      "title": "需求基线：业务任务「1」（占位任务）"
+      "bytes": 5964,
+      "sha256": "sha256:de6e78cc10361430cae1a9dc0dfc33d8b97ac2213e1755fc58453b6fc5dbc1c3",
+      "role": "primary",
+      "purpose": "IssueTask T1000185 需求梳理：按原文登记业务任务「1」，标注全部业务要素未规定，不推断扩充",
+      "title": "需求梳理：IssueTask「1」（T1000185）"
     }
   ],
   "verification": [
     {
-      "checkId": "requirements:completion",
+      "checkId": "AC-001",
       "status": "passed"
+    },
+    {
+      "checkId": "AC-002",
+      "status": "passed"
+    },
+    {
+      "checkId": "AC-003",
+      "status": "passed"
+    },
+    {
+      "checkId": "AC-004",
+      "status": "passed"
+    },
+    {
+      "checkId": "requirements:clarification",
+      "status": "passed",
+      "readiness": {
+        "mode": "document",
+        "semanticHash": "sha256:de6e78cc10361430cae1a9dc0dfc33d8b97ac2213e1755fc58453b6fc5dbc1c3",
+        "revision": 1
+      }
     }
   ]
 }
