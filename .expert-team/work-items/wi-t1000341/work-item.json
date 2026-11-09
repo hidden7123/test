@@ -1,0 +1,11 @@
+{
+  "workItemId": "wi-t1000341",
+  "applicationId": "application",
+  "workItemType": "initial-build",
+  "title": "画一只蝴蝶\n\n画一只蝴蝶\n\nOriginal task context (user-provided facts):\n\n{\"issueId\":\"18686067779571712\",\"code\":\"T1000341\",\"title\":\"画一只蝴蝶\",\"description\":\"画一只蝴蝶\",\"priority\":\"normal\",\"labels\":[],\"kind\":\"requirement\",\"acceptanceCriteria\":[],\"projectName\":\"task4\"}",
+  "request": "画一只蝴蝶\n\n画一只蝴蝶\n\nOriginal task context (user-provided facts):\n\n{\"issueId\":\"18686067779571712\",\"code\":\"T1000341\",\"title\":\"画一只蝴蝶\",\"description\":\"画一只蝴蝶\",\"priority\":\"normal\",\"labels\":[],\"kind\":\"requirement\",\"acceptanceCriteria\":[],\"projectName\":\"task4\"}",
+  "status": "active",
+  "specId": "general-application-development-spec",
+  "revision": 0,
+  "createdAt": "2026-10-28T03:23:19.519Z"
+}

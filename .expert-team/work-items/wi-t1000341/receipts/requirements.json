@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "requirements:1",
+  "receiptType": "requirements-baseline",
+  "specId": "general-application-development-spec",
+  "graphRevision": 5,
+  "actionId": "requirements",
+  "inputRevision": 0,
+  "stateVersion": 1,
+  "outcome": "passed",
+  "contentHash": "sha256:bf67574e5396cc9acc06c734c43f299315eb973e8d046f7894faa41efb58e7ea",
+  "createdAt": "2026-10-28T03:23:41.096Z",
+  "timing": {
+    "startedAt": "2026-10-28T03:23:19.630Z",
+    "completedAt": "2026-10-28T03:23:41.095Z",
+    "durationMs": 21465
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000341/requirements.md",
+      "bytes": 3012,
+      "sha256": "sha256:c7f10253618af99171f7bb83e1e328dee88f76ca44ddaf21f33dde709e57366c",
+      "role": "requirements",
+      "purpose": "画一只蝴蝶的需求文档：逐字登记用户原文请求，标注未规定范围，不设推荐基线",
+      "title": "画一只蝴蝶 — 需求文档"
+    }
+  ],
+  "verification": [
+    {
+      "checkId": "AC-01",
+      "status": "passed",
+      "detail": "交付文档第 1 章逐字对照 issue 标题与描述『画一只蝴蝶』，描述为空、验收标准为空、优先级 normal、标签为空，均按原文登记。"
+    },
+    {
+      "checkId": "AC-02",
+      "status": "passed",
+      "detail": "第 2 章列出承载形态、风格、动态性、输出格式、受众、数据角色权限、验收口径共 7 类未规定事项，全部标注未定义；第 3 章明确推荐基线为『无』并说明理由，未新增任何功能承诺。"
+    },
+    {
+      "checkId": "scope-write-boundary",
+      "status": "passed",
+      "detail": "仅写入 docs/wi-t1000341/requirements.md，未修改其他路径。"
+    }
+  ]
+}
